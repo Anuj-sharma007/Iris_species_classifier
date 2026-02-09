@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Iris Data Species Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Species Prediction Using ML</h1>
+
+    <form action = "{{url_for('predict')}}" method="post">
+
+        <input type="float" name="sepal_length" placeholder="sepal_length"required="required">
+            <br>
+        <input type="float" name="sepal_width" placeholder="sepal_width"required="required">
+            <br>
+        <input type="float" name="petal_length" placeholder="petal_length"required="required">
+            <br>
+        <input type="float" name="petal_width" placeholder="petal_width"required="required">
+            <br>
+
+      
+        <br><br>
+        <button type="submit">Submit</button> <button type="reset">Reset</button>
+        
+        <br><br>
+        Species :<br>
+        <i>{{prediction_text}}</i>
+
+    </form>
+
+
+
+</body>
+</html>
+
